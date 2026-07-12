@@ -1,0 +1,14 @@
+<section class="products" id="products" >
+  <div class="container">
+    <h2 class="products__title" id="products__title">Выберите свою любимую пиццу  </h2>
+    <div class="products__items">
+      <product-card *ngFor="let product of products" [product]="product">  </product-card>
+    </div>
+
+    <div *ngIf="loading" class="loader-bg">
+      <div class="loader"></div>
+
+    </div>
+
+  </div>
+</section>

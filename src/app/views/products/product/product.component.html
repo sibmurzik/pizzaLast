@@ -1,0 +1,31 @@
+<section class="products">
+  <div class="container">
+    <h2 class="products__title">Описание пиццы</h2>
+    <div class="products__item">
+
+        <ng-template [ngIf]="product.image" >
+          <div class="product__image"  >
+            <img src="{{product.image}}" alt="product">
+          </div>
+
+        </ng-template>
+
+
+        <ng-template [ngIf]="!product.image" ]>
+          <div class="product__image"  >
+            <img src="../../../../assets/pizza_cut.png" alt="product">
+          </div>
+
+        </ng-template>
+
+        <custom-title [title]="product.title | uppercase" >
+        </custom-title>
+        <div class="product__text">{{product.description | wordUpper:['сыр', 'томат', 'сос']}}</div>
+        <div class="product__action" #elem>
+          <button class="btn product__btn btn_add_to_card" routerLink="/order" [queryParams]="{product:product.title}" >В корзину</button>
+        </div>
+
+      </div>
+
+  </div>
+</section>

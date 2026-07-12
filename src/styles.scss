@@ -1,0 +1,575 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+
+:root {
+  --background-color: rgb(255, 255, 255);
+  --box-shadow: rgba(152, 152, 152, 0.2);
+  --secondary-color: rgb(185, 145, 80);;
+  --primary-color: rgb(255, 175, 24);
+  --texr-accent-color: rgb(56, 36, 0);
+  --text-color: rgb(26, 26, 26);
+  --bold-font: MullerBold, sans-serif;
+  --extra-bold-font: MullerExtraBold, sans-serif;
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+@font-face {
+  font-family: Muller;
+  src: url(./assets/fonts/MullerRegular.otf);
+}
+
+@font-face {
+  font-family: MullerBold;
+  src: url(./assets/fonts/MullerBold.otf);
+}
+
+@font-face {
+  font-family: MullerExtraBold;
+  src: url(./assets/fonts/MullerExtraBold.otf);
+}
+
+body {
+  font-family: Muller, sans-serif;
+}
+
+body.dark-mode {
+  --background-color: rgb(37, 37, 37);
+  --text-color: rgb(255, 255, 255);
+}
+
+
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+.menu__link_active {
+  border-bottom: 1px solid grey;
+}
+
+
+body.dark-mode .header .container .theme {
+  background: white;
+}
+
+.main {
+  padding: 132px 0 81px 0;
+  background-color: var(--background-color);
+
+
+}
+
+.main__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main__info {
+  max-width: 622px;
+}
+
+.main__double-title {
+  font-size: 45px;
+  line-height: 55px;
+  font-family: var(--extra-bold-font), serif;
+}
+
+
+.double-title {
+  color: var(--secondary-color);
+}
+
+.double-title__span {
+  color: var(--primary-color);
+}
+
+.double-title span {
+  color: var(--primary-color);
+}
+
+
+.main__advantages {
+  margin-top: 13px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.advantage {
+  max-width: 306px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 47px;
+
+}
+
+.advantage__text {
+  margin-left: 16px;
+}
+
+.advantage__title {
+  font-size: 16px;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  color: var(--primary-color);
+  font-family: var(--extra-bold-font), serif;
+  margin-bottom: 10px;
+}
+
+.advantage__description {
+  font-size: 16px;
+  letter-spacing: 0;
+  color: var(--secondary-color);
+
+}
+
+.main__action {
+  margin-top: 60px;
+}
+
+.btn {
+  font-size: 16px;
+  color: var(--texr-accent-color);
+  font-family: var(--bold-font), serif;
+  background-color: var(--primary-color);
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  padding: 22px;
+  box-sizing: border-box;
+  text-decoration: none;
+  text-align: center;
+
+}
+
+.btn.btn-white {
+  background: transparent;
+  border: 1px solid rgb(255, 174, 24);
+  color: rgb(255, 174, 24);
+}
+
+.main__btn {
+  width: 224px;
+  height: 60px;
+}
+
+.products {
+  padding: 80px 0 120px 0;
+  background-color: var(--background-color);
+
+}
+
+.products__title {
+  font-size: 35px;
+  color: #bd985c;
+  font-family: var(--bold-font), serif;
+  text-align: center;
+}
+
+.products__items {
+  display: flex;
+  margin-top: 35px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+
+.order {
+  padding: 120px 0 115px 0;
+  overflow: hidden;
+  background-color: var(--background-color);
+}
+
+.order__container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.order__text {
+  max-width: 384px;
+}
+
+.order__double-title {
+  font-size: 35px;
+  font-family: "MullerExtraBold", sans-serif;
+  margin-bottom: 65px;
+}
+
+.order__text-message {
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--secondary-color);
+}
+
+.order__form {
+  margin-left: 122px;
+  max-width: 330px;
+
+}
+
+.base-input {
+  background-color: var(--background-color);
+  border: 1px solid var(--secondary-color);
+  font-size: 18px;
+  color: rgb(119, 94, 49);
+  padding: 23px 22px 24px 22px;
+  box-sizing: border-box;
+  outline: none;
+
+}
+
+.order__base-input {
+  width: 330px;
+  margin-bottom: 24px;
+  height: 60px;
+
+  &::placeholder {
+    color: #cba86e;
+  }
+
+
+}
+
+
+.order_btn {
+  width: 330px;
+  height: 60px;
+
+}
+
+.order__image {
+  width: 282px;
+  position: relative;
+  margin-left: 78px;
+}
+
+.order__image-img {
+  position: absolute;
+  bottom: -35px;
+  left: 0;
+}
+
+.footer {
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 3px 13.8px 1.2px rgba(152, 152, 152, 0.2);
+  padding: 16px 0 15px;
+
+}
+
+.footer__container {
+  display: flex;
+  align-items: center;
+}
+
+.footer__rights {
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: #bab3b3;
+  margin-left: 358px;
+}
+
+.header__burger {
+  display: none;
+}
+
+.menu__close {
+  display: none;
+}
+
+.hvr-sweep-to-right:before {
+  background: #9f6c09;
+}
+
+.white-popup {
+  position: relative;
+  background: #FFF;
+  padding: 20px;
+  width: auto;
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+.parallax-window {
+  min-height: 600px;
+  background: transparent;
+}
+
+.cookie {
+  position: fixed;
+  bottom: 30px;
+  left: 20px;
+  padding: 20px;
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 330px;
+  display: none;
+}
+
+.cookie__title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 20px;
+  font-family: "MullerExtraBold", sans-serif;
+}
+
+.cookie__title span {
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.cookie__text {
+  font-size: 16px;
+  line-height: 20px;
+  margin-top: 10px;
+}
+
+.cookie__button .btn {
+  border: 0;
+  outline: none;
+  margin-top: 10px;
+  width: 100%;
+}
+
+
+/*1024-1229*/
+@media screen  and (max-width: 1229px) {
+  .container{
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .main__image {
+    width: 400px;
+  }
+
+  .main__image-img{
+    max-width: 100%;
+  }
+
+  .products__items{
+    justify-content: center;
+  }
+
+
+
+  .order__form {
+    margin-left: 45px;
+  }
+
+  .order__container {
+    max-width: 1024px;
+  }
+
+
+}
+/*768-1023*/
+@media screen  and (max-width: 1023px) {
+  .menu__list {
+    max-width: 420px;
+  }
+
+  .main__container {
+    flex-direction: column;
+  }
+
+  .main__image{
+    order: 1;
+  }
+  .main__info  {
+    order: 2;
+  }
+
+  .main{
+    margin-top: 70px;
+  }
+
+  .main__double-title{
+    text-align: center;
+  }
+
+  .main__action{
+    text-align: center;
+  }
+
+  .products{
+    padding-top: 0;
+    padding-bottom: 40px;
+  }
+
+  .order {
+    padding-top: 60px;
+    position: relative;
+
+  }
+
+  .order__image {
+    position: absolute;
+    z-index: -1;
+    right: calc(50% - 400px);
+  }
+
+  .order__image-img{
+    position: relative;
+  }
+
+  .order .container {
+    justify-content: center;
+  }
+
+
+
+
+}
+
+
+
+
+
+/*425-767*/
+@media screen  and (max-width: 767px) {
+
+
+
+
+  .footer__container {
+    justify-content: space-between;
+  }
+
+  .footer__rights{
+    margin-left: 0;
+  }
+
+  .header__container{
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 390px;
+  }
+  .menu {
+    order: 3;
+    margin-top: 15px;
+    flex-basis: 100%;
+  }
+  .menu__list{
+    width: 390px;
+  }
+
+  .theme{
+    margin-left: 20px;
+  }
+
+  .main__double-title{
+    line-height: 45px;
+  }
+
+  .main__advantages{
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+
+  .order__container{
+    flex-direction: column;
+    align-items:  center;
+  }
+
+  .order__double-title{
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .order__text-message{
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  .order__form{
+    margin-left: 0;
+    flex-basis: 100%;
+  }
+
+
+}
+
+@media screen  and (max-width:  656px){
+  .main__advantages{
+    max-width:  306px;
+  }
+
+}
+
+
+
+/*320-374*/
+@media screen  and (max-width: 374px) {
+  .main__double-title {
+    font-size: 38px;
+  }
+
+  .order__form{
+    text-align: center;
+  }
+
+  .order__base-input{
+    width: 290px;
+
+  }
+
+  .order_btn {
+    width: 290px;
+  }
+
+  .footer__rights{
+    margin-left: 20px;
+  }
+
+
+
+
+}
+
+
+.loader-bg {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.49);
+}
+
+.loader {
+  border: 15px solid #f3f3f3;
+  border-top: 15px solid #ffaf18;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 1s linear infinite;
+
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
